@@ -1,7 +1,11 @@
 * {
   font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
 }
-body {
+.body-container {
   margin: 0 1rem;
 }
 nav {
@@ -11,13 +15,13 @@ nav ul {
   width: 100%;
   display: flex;
   align-items: center;
+  padding-left: 0;
 }
 nav ul li {
-  text-decoration: none;
-  list-style: none;
   display: inline-block;
   font-size: 1rem;
   margin: 1rem;
+  cursor: pointer;
 }
 nav ul li:first-child {
   font-size: 1.5rem;
@@ -29,8 +33,71 @@ nav ul .first-icon {
 }
 nav ul > i {
   margin: 1rem;
+  cursor: pointer;
+}
+nav ul > i:hover {
+  color: grey;
+}
+nav ul a:hover {
+  border-bottom: 1px solid black;
+}
+
+.sidebar {
+  position: absolute;
+  width: 12rem;
+  height: 100%;
+  background-color: rgba(255,255,255,0.9);
+  transform: translateX(-100%);
+  transition: ease-in-out 0.5s;
+}
+.sidebar-active {
+  transform: translateX(0);
+}
+.sidebar-items {
+  margin: 1rem;
+  margin-top: 4rem;
+}
+
+.sidebar-items li{
+  margin: 0.7rem;
+}
+.sidebar-items li a{
+  cursor: pointer;
+}
+.sidebar-items li a:hover{
+  border-bottom: 1px solid black;
 }
 
 .container {
+  display: grid;
+  background-color: white;
+}
+
+.banner {
+  width: 100%;
+  height: 32rem;
+  background-image: url('./images/banner.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.banner span {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+.categories {
+
+}
+
+.funnel {
+
+}
+
+.footer {
 
 }

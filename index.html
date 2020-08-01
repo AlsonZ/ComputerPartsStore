@@ -8,18 +8,38 @@
     <title>Computer Parts Store</title>
   </head>
   <body>
-    <!-- <i class="fas fa-shopping-cart"></i> -->
-    <nav>
-      <ul>
-        <li><i class="fas fa-desktop"></i>UParts</li>
-        <li>Computers</li>
-        <li>Laptops</li>
-        <li>Parts</li>
-        <li>Accessories</li>
-        <i class="fas fa-shopping-cart first-icon"></i>
-        <i class="fas fa-search"></i>
+    <div id="sidebar" class="sidebar">
+      <ul class="sidebar-items">
+        <li><a>Computers</a></li>
+        <li><a>Laptops</a></li>
+        <li><a>Parts</a></li>
+        <li><a>Accessories</a></li>
       </ul>
-    </nav>
-
+    </div>
+    <div class="body-container">
+      <nav>
+        <ul>
+          <li><i class="fas fa-desktop"></i>UParts</li>
+          <li><a>Computers</a></li>
+          <li><a>Laptops</a></li>
+          <li><a>Parts</a></li>
+          <li><a>Accessories</a></li>
+          <i class="fas fa-search first-icon"></i>
+          <i class="fas fa-shopping-cart"></i>
+          <i id="menuButton" class="fas fa-bars fa-2x"></i>
+        </ul>
+      </nav>
+      <div class="container">
+        <div class="banner">
+          <span>Buy Now</span>
+        </div>
+        <div class="categories">
+          yes
+        </div>
+        <div class="funnel"></div>
+        <div class="footer"></div>
+      </div>
+    </div>
   </body>
+  <script src="index.js"></script>
 </html>
