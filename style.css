@@ -8,39 +8,49 @@
 .body-container {
   margin: 0 1rem;
 }
+
+/* Main Navbar*/
+
 nav {
   display: flex;
 }
-nav ul {
-  width: 100%;
+.navbar-items {
   display: flex;
   align-items: center;
   padding-left: 0;
 }
-nav ul li {
+.navbar-items li {
   display: inline-block;
   font-size: 1rem;
   margin: 1rem;
   cursor: pointer;
 }
-nav ul li:first-child {
+nav li a:hover {
+  border-bottom: 1px solid black;
+}
+nav .title {
   font-size: 1.5rem;
   margin: 1rem 1.5rem;
+  display: flex;
+  cursor: pointer;
 }
-
-nav ul .first-icon {
+.nav-icons {
+  display: flex;
+  align-items: center;
   margin-left: auto;
 }
-nav ul > i {
+.nav-icons i {
   margin: 1rem;
   cursor: pointer;
 }
-nav ul > i:hover {
+.nav-icons i:hover, nav .title:hover {
   color: grey;
 }
-nav ul a:hover {
-  border-bottom: 1px solid black;
+.nav-icons .menu-button {
+  display: none;
 }
+
+/* Sidebar */
 
 .sidebar {
   position: absolute;
@@ -57,7 +67,6 @@ nav ul a:hover {
   margin: 1rem;
   margin-top: 4rem;
 }
-
 .sidebar-items li{
   margin: 0.7rem;
 }
@@ -100,4 +109,15 @@ nav ul a:hover {
 
 .footer {
 
+}
+
+
+
+@media only screen and (max-width: 770px) {
+  .nav-icons .menu-button {
+    display: block;
+  }
+  .navbar-items {
+    display: none;
+  }
 }
