@@ -1,0 +1,36 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  margin: 0 1rem;
+}
+nav {
+  display: flex;
+}
+nav ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+nav ul li {
+  text-decoration: none;
+  list-style: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 1rem;
+}
+nav ul li:first-child {
+  font-size: 1.5rem;
+  margin: 1rem 1.5rem;
+}
+
+nav ul .first-icon {
+  margin-left: auto;
+}
+nav ul > i {
+  margin: 1rem;
+}
+
+.container {
+
+}
