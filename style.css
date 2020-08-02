@@ -147,6 +147,7 @@ nav .title {
 }
 .categories div{
   border: 1px solid rgba(1,1,1,0.1);
+  cursor: pointer;
 }
 .categories div img {
   width: 180;
@@ -158,6 +159,8 @@ nav .title {
   user-select: none;
 }
 
+/* Funnel */
+
 .funnel {
   background-image: url('./images/funnel.jpg');
 }
@@ -165,8 +168,23 @@ nav .title {
   color: white;
 }
 
-.footer {
+/* Footer */
 
+.footer {
+  background-color: lightgrey;
+  margin-top: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.footer span{
+  cursor: pointer;
+  user-select: none;
+  color: rgb(105, 105, 105);
+}
+.footer a:hover {
+  border-bottom: 1px solid black;
 }
 
 @media only screen and (max-width: 1200px) {
