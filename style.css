@@ -106,7 +106,9 @@ nav .title {
   background-color: white;
 }
 
-.banner {
+/* Banner */
+
+.banner, .funnel {
   width: 100%;
   height: 32rem;
   background-image: url('./images/banner.jpg');
@@ -117,33 +119,66 @@ nav .title {
   flex-direction: column;
   justify-content: flex-end;
 }
-.banner div {
+.banner div, .funnel div {
   margin-left: 3rem;
   margin-bottom: 3rem;
 }
-.banner p {
+.banner p, .funnel p {
   margin: 1rem 0;
+  user-select: none;
 }
-.banner div button{
+.banner div button, .funnel div button{
   padding: 0.7rem;
   font-size: 0.8rem;
   background-color: var(--highlight-color);
   color: var(--button-text);
 }
 
+
+/* Categories of Items */
+
 .categories {
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  place-items: center;
+  margin: 1rem 0;
+  transition: 1s ease-in-out;
+}
+.categories div{
+  border: 1px solid rgba(1,1,1,0.1);
+}
+.categories div img {
+  width: 180;
+  height: 160;
+  -webkit-user-drag: none;
+}
+.categories div p {
+  text-align: center;
+  user-select: none;
 }
 
 .funnel {
-
+  background-image: url('./images/funnel.jpg');
+}
+.funnel p {
+  color: white;
 }
 
 .footer {
 
 }
 
-
+@media only screen and (max-width: 1200px) {
+  .body-container {
+    margin: 0 5%;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .categories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 @media only screen and (max-width: 770px) {
   .body-container {
@@ -170,4 +205,14 @@ nav .title {
     }
   }
 
+  .categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media only screen and (max-width: 450px) {
+  .categories {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
