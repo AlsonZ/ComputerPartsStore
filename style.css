@@ -10,7 +10,8 @@
 }
 .body-container {
   margin: 0 10%;
-  transition: var(--speed) ease-in-out
+  transition: var(--speed) ease-in-out;
+  min-height: 100%;
 }
 button {
   margin: 0;
@@ -26,6 +27,10 @@ button:active{
 }
 button:focus {
   outline: none;
+}
+a {
+  color: black;
+  -webkit-user-drag: none;
 }
 
 /* Main Navbar*/
@@ -104,6 +109,7 @@ nav .title {
 .container {
   display: grid;
   background-color: white;
+  /* min-height: 90%; */
 }
 
 /* Banner */
@@ -187,14 +193,63 @@ nav .title {
   border-bottom: 1px solid black;
 }
 
+/* Items */
+
+.selection {
+  border: 1px solid rgba(1,1,1,0.1);
+  width: 10rem;
+  margin: 5rem 1rem;
+  margin-bottom: 1rem;
+  max-height: 25rem;
+}
+.selection li {
+  margin: 1rem;
+}
+.selection li:first-child {
+  font-size: 1.2rem;
+}
+.selection li label {
+  user-select: none;
+}
+
+.content-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+.items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 5rem;
+  gap: 20px;
+}
+.items div {
+  border: 1px solid rgba(1,1,1,0.1);
+  width: 200;
+  height: 200;
+}
+.items img {
+  width: 180;
+  height: 180;
+  -webkit-user-drag: none;
+}
+.items p {
+  text-align: center;
+}
+
 @media only screen and (max-width: 1200px) {
   .body-container {
     margin: 0 5%;
+  }
+  .items {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media only screen and (max-width: 850px) {
   .categories {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .items {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -222,15 +277,32 @@ nav .title {
       overflow: hidden;
     }
   }
-
   .categories {
     grid-template-columns: repeat(2, 1fr);
   }
 
+}
+@media only screen and (max-width: 680px) {
+  .content-container {
+    grid-template-columns: none;
+    grid-template-rows: 26rem 1fr;
+    place-items: center;
+  }
+  .selection {
+    margin-top: 1rem;
+  }
+  .items {
+    margin-top: 1rem;
+  }
+  
 }
 
 @media only screen and (max-width: 450px) {
   .categories {
     grid-template-columns: repeat(1, 1fr);
   }
+  .items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
 }
