@@ -151,16 +151,16 @@ nav .title {
   margin: 1rem 0;
   transition: 1s ease-in-out;
 }
-.categories div{
+.categories a{
   border: 1px solid rgba(1,1,1,0.1);
   cursor: pointer;
 }
-.categories div img {
+.categories a img {
   width: 180;
   height: 160;
   -webkit-user-drag: none;
 }
-.categories div p {
+.categories a p {
   text-align: center;
   user-select: none;
 }
@@ -226,11 +226,14 @@ nav .title {
   border: 1px solid rgba(1,1,1,0.1);
   width: 200;
   height: 200;
+  display: grid;
+  place-items: center;
 }
 .items img {
   width: 180;
   height: 180;
   -webkit-user-drag: none;
+  margin: auto;
 }
 .items p {
   text-align: center;
